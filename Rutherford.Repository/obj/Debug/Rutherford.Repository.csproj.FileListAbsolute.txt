@@ -1,0 +1,12 @@
+C:\Users\Gary\Desktop\Rutherford\Rutherford.Repository\bin\Debug\Rutherford.Repository.dll.config
+C:\Users\Gary\Desktop\Rutherford\Rutherford.Repository\bin\Debug\Rutherford.Repository.dll
+C:\Users\Gary\Desktop\Rutherford\Rutherford.Repository\bin\Debug\Rutherford.Repository.pdb
+C:\Users\Gary\Desktop\Rutherford\Rutherford.Repository\bin\Debug\EntityFramework.dll
+C:\Users\Gary\Desktop\Rutherford\Rutherford.Repository\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Gary\Desktop\Rutherford\Rutherford.Repository\bin\Debug\Ninject.dll
+C:\Users\Gary\Desktop\Rutherford\Rutherford.Repository\bin\Debug\EntityFramework.xml
+C:\Users\Gary\Desktop\Rutherford\Rutherford.Repository\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Gary\Desktop\Rutherford\Rutherford.Repository\bin\Debug\Ninject.xml
+C:\Users\Gary\Desktop\Rutherford\Rutherford.Repository\obj\Debug\Rutherford.Repository.dll
+C:\Users\Gary\Desktop\Rutherford\Rutherford.Repository\obj\Debug\Rutherford.Repository.pdb
+C:\Users\Gary\Desktop\Rutherford\Rutherford.Repository\obj\Debug\Rutherford.Repository.csprojResolveAssemblyReference.cache

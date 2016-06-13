@@ -1,0 +1,38 @@
+﻿<Window x:Class="Rutherford.Client.Views.EventManagerView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Rutherford.Client.Views"
+        mc:Ignorable="d"
+        Title="EventManagerView" Height="300" Width="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Content="Add Event" Command="{Binding Path=AddEventCommand}" Margin="2" Height="30"/>
+            <Button Grid.Column="1" Content="Remove Event" Command="{Binding Path=RemoveEventCommand}" Margin="2" Height="30"/>
+            <Button Grid.Column="2" Content="Edit Event" Command="{Binding Path=EditEventCommand}" Margin="2" Height="30"/>
+        </Grid>
+        <DataGrid Grid.Row="1" ItemsSource="{Binding Path=Events}" x:Name="dgEvents" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                  SelectionMode="Single" SelectedItem="{Binding Path=SelectedEvent}" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding Path=EventId}"/>
+                <DataGridTextColumn Header="Name" Binding="{Binding Path=Name}"/>
+                <DataGridTextColumn Header="Date" Binding="{Binding Path=Date}"/>
+                <DataGridTextColumn Header="Location" Binding="{Binding Path=Location}"/>
+                <DataGridTextColumn Header="Price" Binding="{Binding Path=Price}"/>
+                <DataGridTextColumn Header="Total Tickets" Binding="{Binding Path=TotalTickets}"/>
+                <DataGridTextColumn Header="Notes" Binding="{Binding Path=Notes}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

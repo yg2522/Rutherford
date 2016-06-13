@@ -1,0 +1,15 @@
+C:\Users\Gary\Desktop\Rutherford\Rutherford.Service\bin\Debug\Rutherford.Service.dll
+C:\Users\Gary\Desktop\Rutherford\Rutherford.Service\bin\Debug\Rutherford.Service.pdb
+C:\Users\Gary\Desktop\Rutherford\Rutherford.Service\bin\Debug\Ninject.dll
+C:\Users\Gary\Desktop\Rutherford\Rutherford.Service\bin\Debug\Rutherford.dll
+C:\Users\Gary\Desktop\Rutherford\Rutherford.Service\bin\Debug\Rutherford.Repository.dll
+C:\Users\Gary\Desktop\Rutherford\Rutherford.Service\bin\Debug\Utility.dll
+C:\Users\Gary\Desktop\Rutherford\Rutherford.Service\bin\Debug\EntityFramework.dll
+C:\Users\Gary\Desktop\Rutherford\Rutherford.Service\bin\Debug\Rutherford.Repository.pdb
+C:\Users\Gary\Desktop\Rutherford\Rutherford.Service\bin\Debug\Rutherford.pdb
+C:\Users\Gary\Desktop\Rutherford\Rutherford.Service\bin\Debug\Utility.pdb
+C:\Users\Gary\Desktop\Rutherford\Rutherford.Service\bin\Debug\Ninject.xml
+C:\Users\Gary\Desktop\Rutherford\Rutherford.Service\bin\Debug\EntityFramework.xml
+C:\Users\Gary\Desktop\Rutherford\Rutherford.Service\obj\Debug\Rutherford.Service.csprojResolveAssemblyReference.cache
+C:\Users\Gary\Desktop\Rutherford\Rutherford.Service\obj\Debug\Rutherford.Service.dll
+C:\Users\Gary\Desktop\Rutherford\Rutherford.Service\obj\Debug\Rutherford.Service.pdb

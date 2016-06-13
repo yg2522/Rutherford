@@ -1,0 +1,7 @@
+C:\Users\Gary\Desktop\Rutherford\Rutherford\bin\Debug\Rutherford.dll
+C:\Users\Gary\Desktop\Rutherford\Rutherford\bin\Debug\Rutherford.pdb
+C:\Users\Gary\Desktop\Rutherford\Rutherford\bin\Debug\Ninject.dll
+C:\Users\Gary\Desktop\Rutherford\Rutherford\bin\Debug\Ninject.xml
+C:\Users\Gary\Desktop\Rutherford\Rutherford\obj\Debug\Rutherford.dll
+C:\Users\Gary\Desktop\Rutherford\Rutherford\obj\Debug\Rutherford.pdb
+C:\Users\Gary\Desktop\Rutherford\Rutherford\obj\Debug\Rutherford.csprojResolveAssemblyReference.cache

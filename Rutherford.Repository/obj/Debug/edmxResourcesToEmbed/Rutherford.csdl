@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RutherfordModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="CustomerId" />
+    </Key>
+    <Property Name="CustomerId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Transactions" Relationship="RutherfordModel.FK_TransactionHistory_Customer1" FromRole="Customer" ToRole="Transaction" />
+  </EntityType>
+  <EntityType Name="Event">
+    <Key>
+      <PropertyRef Name="EventId" />
+    </Key>
+    <Property Name="EventId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
+    <Property Name="Location" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Price" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="TotalTickets" Type="Int32" Nullable="false" />
+    <Property Name="Notes" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Transactions" Relationship="RutherfordModel.FK_TransactionHistory_Event1" FromRole="Event" ToRole="Transaction" />
+  </EntityType>
+  <EntityContainer Name="RutherfordEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Customers" EntityType="Self.Customer" />
+    <EntitySet Name="Events" EntityType="Self.Event" />
+    <EntitySet Name="Transactions" EntityType="RutherfordModel.Transaction" />
+    <AssociationSet Name="FK_TransactionHistory_Customer1" Association="RutherfordModel.FK_TransactionHistory_Customer1">
+      <End Role="Customer" EntitySet="Customers" />
+      <End Role="Transaction" EntitySet="Transactions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TransactionHistory_Event1" Association="RutherfordModel.FK_TransactionHistory_Event1">
+      <End Role="Event" EntitySet="Events" />
+      <End Role="Transaction" EntitySet="Transactions" />
+    </AssociationSet>
+    <FunctionImport Name="AddCustomer" ReturnType="Collection(RutherfordModel.AddCustomer_Result)">
+      <Parameter Name="name" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="AddEvent" ReturnType="Collection(RutherfordModel.AddEvent_Result)">
+      <Parameter Name="name" Mode="In" Type="String" />
+      <Parameter Name="date" Mode="In" Type="DateTime" />
+      <Parameter Name="location" Mode="In" Type="String" />
+      <Parameter Name="price" Mode="In" Type="Decimal" />
+      <Parameter Name="totalTickets" Mode="In" Type="Int32" />
+      <Parameter Name="notes" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetCustomer" ReturnType="Collection(RutherfordModel.GetCustomer_Result)">
+      <Parameter Name="customerId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetEvent" ReturnType="Collection(RutherfordModel.GetEvent_Result)">
+      <Parameter Name="eventId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="RemoveCustomer" ReturnType="Collection(RutherfordModel.RemoveCustomer_Result)">
+      <Parameter Name="customerId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateCustomer" ReturnType="Collection(RutherfordModel.UpdateCustomer_Result)">
+      <Parameter Name="customerId" Mode="In" Type="Int32" />
+      <Parameter Name="name" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateEvent" ReturnType="Collection(RutherfordModel.UpdateEvent_Result)">
+      <Parameter Name="eventId" Mode="In" Type="Int32" />
+      <Parameter Name="name" Mode="In" Type="String" />
+      <Parameter Name="date" Mode="In" Type="DateTime" />
+      <Parameter Name="location" Mode="In" Type="String" />
+      <Parameter Name="price" Mode="In" Type="Decimal" />
+      <Parameter Name="totalTickets" Mode="In" Type="Int32" />
+      <Parameter Name="notes" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="AddTransaction" ReturnType="Collection(RutherfordModel.AddTransaction_Result)">
+      <Parameter Name="customerId" Mode="In" Type="Int32" />
+      <Parameter Name="eventId" Mode="In" Type="Int32" />
+      <Parameter Name="qty" Mode="In" Type="Int32" />
+      <Parameter Name="paid" Mode="In" Type="Decimal" />
+      <Parameter Name="date" Mode="In" Type="DateTime" />
+      <Parameter Name="ccNumber" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="GetEventTransaction" ReturnType="Collection(RutherfordModel.GetEventTransaction_Result)">
+      <Parameter Name="eventId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetTransaction" ReturnType="Collection(RutherfordModel.GetTransaction_Result)">
+      <Parameter Name="customerId" Mode="In" Type="Int32" />
+      <Parameter Name="eventId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetCustomerTransaction" ReturnType="Collection(RutherfordModel.GetCustomerTransaction_Result)">
+      <Parameter Name="customerId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="RemoveEvent" ReturnType="Collection(RutherfordModel.RemoveEvent_Result)">
+      <Parameter Name="eventId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetCustomers" ReturnType="Collection(RutherfordModel.GetCustomers_Result)" />
+    <FunctionImport Name="GetEvents" ReturnType="Collection(RutherfordModel.GetEvents_Result)" />
+    <FunctionImport Name="GetTransactions" ReturnType="Collection(RutherfordModel.GetTransactions_Result)" />
+    <FunctionImport Name="GetTotalPurchasedEventTickets" ReturnType="Collection(Int32)">
+      <Parameter Name="eventId" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="Transaction">
+    <Key>
+      <PropertyRef Name="CustomerId" />
+      <PropertyRef Name="EventId" />
+    </Key>
+    <Property Name="CustomerId" Type="Int32" Nullable="false" />
+    <Property Name="EventId" Type="Int32" Nullable="false" />
+    <Property Name="Qty" Type="Int32" Nullable="false" />
+    <Property Name="Paid" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
+    <Property Name="CreditCardNumber" Type="Decimal" Precision="16" Scale="0" />
+    <NavigationProperty Name="Customer" Relationship="RutherfordModel.FK_TransactionHistory_Customer1" FromRole="Transaction" ToRole="Customer" />
+    <NavigationProperty Name="Event" Relationship="RutherfordModel.FK_TransactionHistory_Event1" FromRole="Transaction" ToRole="Event" />
+  </EntityType>
+  <Association Name="FK_TransactionHistory_Customer1">
+    <End Type="RutherfordModel.Customer" Role="Customer" Multiplicity="1" />
+    <End Type="RutherfordModel.Transaction" Role="Transaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="CustomerId" />
+      </Principal>
+      <Dependent Role="Transaction">
+        <PropertyRef Name="CustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TransactionHistory_Event1">
+    <End Type="RutherfordModel.Event" Role="Event" Multiplicity="1" />
+    <End Type="RutherfordModel.Transaction" Role="Transaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Event">
+        <PropertyRef Name="EventId" />
+      </Principal>
+      <Dependent Role="Transaction">
+        <PropertyRef Name="EventId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="AddCustomer_Result">
+    <Property Type="Int32" Name="CustomerId" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="255" />
+  </ComplexType>
+  <ComplexType Name="AddEvent_Result">
+    <Property Type="Int32" Name="EventId" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="500" />
+    <Property Type="DateTime" Name="Date" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Location" Nullable="true" MaxLength="500" />
+    <Property Type="Decimal" Name="Price" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="TotalTickets" Nullable="false" />
+    <Property Type="String" Name="Notes" Nullable="true" MaxLength="4000" />
+  </ComplexType>
+  <ComplexType Name="GetCustomer_Result">
+    <Property Type="Int32" Name="CustomerId" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="255" />
+  </ComplexType>
+  <ComplexType Name="GetEvent_Result">
+    <Property Type="Int32" Name="EventId" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="500" />
+    <Property Type="DateTime" Name="Date" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Location" Nullable="true" MaxLength="500" />
+    <Property Type="Decimal" Name="Price" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="TotalTickets" Nullable="false" />
+    <Property Type="String" Name="Notes" Nullable="true" MaxLength="4000" />
+  </ComplexType>
+  <ComplexType Name="RemoveCustomer_Result">
+    <Property Type="Int32" Name="CustomerId" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="255" />
+  </ComplexType>
+  <ComplexType Name="UpdateCustomer_Result">
+    <Property Type="Int32" Name="CustomerId" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="255" />
+  </ComplexType>
+  <ComplexType Name="UpdateEvent_Result">
+    <Property Type="Int32" Name="EventId" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="500" />
+    <Property Type="DateTime" Name="Date" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Location" Nullable="true" MaxLength="500" />
+    <Property Type="Decimal" Name="Price" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="TotalTickets" Nullable="false" />
+    <Property Type="String" Name="Notes" Nullable="true" MaxLength="4000" />
+  </ComplexType>
+  <ComplexType Name="AddTransaction_Result">
+    <Property Type="Int32" Name="CustomerId" Nullable="false" />
+    <Property Type="Int32" Name="EventId" Nullable="false" />
+    <Property Type="Int32" Name="Qty" Nullable="false" />
+    <Property Type="Decimal" Name="Paid" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="DateTime" Name="Date" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="CreditCardNumber" Nullable="true" Precision="16" Scale="0" />
+  </ComplexType>
+  <ComplexType Name="GetEventTransaction_Result">
+    <Property Type="Int32" Name="CustomerId" Nullable="false" />
+    <Property Type="Int32" Name="EventId" Nullable="false" />
+    <Property Type="Int32" Name="Qty" Nullable="false" />
+    <Property Type="Decimal" Name="Paid" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="DateTime" Name="Date" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="CreditCardNumber" Nullable="true" Precision="16" Scale="0" />
+  </ComplexType>
+  <ComplexType Name="GetTransaction_Result">
+    <Property Type="Int32" Name="CustomerId" Nullable="false" />
+    <Property Type="Int32" Name="EventId" Nullable="false" />
+    <Property Type="Int32" Name="Qty" Nullable="false" />
+    <Property Type="Decimal" Name="Paid" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="DateTime" Name="Date" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="CreditCardNumber" Nullable="true" Precision="16" Scale="0" />
+  </ComplexType>
+  <ComplexType Name="GetCustomerTransaction_Result">
+    <Property Type="Int32" Name="CustomerId" Nullable="false" />
+    <Property Type="Int32" Name="EventId" Nullable="false" />
+    <Property Type="Int32" Name="Qty" Nullable="false" />
+    <Property Type="Decimal" Name="Paid" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="DateTime" Name="Date" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="CreditCardNumber" Nullable="true" Precision="16" Scale="0" />
+  </ComplexType>
+  <ComplexType Name="RemoveEvent_Result">
+    <Property Type="Int32" Name="EventId" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="500" />
+    <Property Type="DateTime" Name="Date" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Location" Nullable="true" MaxLength="500" />
+    <Property Type="Decimal" Name="Price" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="TotalTickets" Nullable="false" />
+    <Property Type="String" Name="Notes" Nullable="true" MaxLength="4000" />
+  </ComplexType>
+  <ComplexType Name="GetCustomers_Result">
+    <Property Type="Int32" Name="CustomerId" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="255" />
+  </ComplexType>
+  <ComplexType Name="GetEvents_Result">
+    <Property Type="Int32" Name="EventId" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="500" />
+    <Property Type="DateTime" Name="Date" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Location" Nullable="true" MaxLength="500" />
+    <Property Type="Decimal" Name="Price" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="TotalTickets" Nullable="false" />
+    <Property Type="String" Name="Notes" Nullable="true" MaxLength="4000" />
+  </ComplexType>
+  <ComplexType Name="GetTransactions_Result">
+    <Property Type="Int32" Name="CustomerId" Nullable="false" />
+    <Property Type="Int32" Name="EventId" Nullable="false" />
+    <Property Type="Int32" Name="Qty" Nullable="false" />
+    <Property Type="Decimal" Name="Paid" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="DateTime" Name="Date" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="CreditCardNumber" Nullable="true" Precision="16" Scale="0" />
+  </ComplexType>
+</Schema>

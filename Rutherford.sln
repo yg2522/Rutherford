@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rutherford.Repository", "Rutherford.Repository\Rutherford.Repository.csproj", "{4EC0E2D8-71D5-4F71-827D-DCEF92446236}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rutherford", "Rutherford\Rutherford.csproj", "{9EF232D7-5F3D-4EB2-9567-A48ABB0A29BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rutherford.Client", "Rutherford.Client\Rutherford.Client.csproj", "{41C05CC6-A282-4E16-B078-C78B243E5B57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility", "Utility\Utility.csproj", "{1F9492AC-4062-447E-9663-6B35C292AEF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rutherford.Data", "Rutherford.Data\Rutherford.Data.csproj", "{FA9AAA83-07D3-4480-9EF2-C9DA0C397485}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rutherford.Service", "Rutherford.Service\Rutherford.Service.csproj", "{3D85BD2C-5312-4503-97C4-F0552A493BE4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4EC0E2D8-71D5-4F71-827D-DCEF92446236}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EC0E2D8-71D5-4F71-827D-DCEF92446236}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EC0E2D8-71D5-4F71-827D-DCEF92446236}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EC0E2D8-71D5-4F71-827D-DCEF92446236}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EF232D7-5F3D-4EB2-9567-A48ABB0A29BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EF232D7-5F3D-4EB2-9567-A48ABB0A29BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EF232D7-5F3D-4EB2-9567-A48ABB0A29BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EF232D7-5F3D-4EB2-9567-A48ABB0A29BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41C05CC6-A282-4E16-B078-C78B243E5B57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41C05CC6-A282-4E16-B078-C78B243E5B57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41C05CC6-A282-4E16-B078-C78B243E5B57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41C05CC6-A282-4E16-B078-C78B243E5B57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F9492AC-4062-447E-9663-6B35C292AEF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F9492AC-4062-447E-9663-6B35C292AEF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F9492AC-4062-447E-9663-6B35C292AEF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F9492AC-4062-447E-9663-6B35C292AEF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA9AAA83-07D3-4480-9EF2-C9DA0C397485}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA9AAA83-07D3-4480-9EF2-C9DA0C397485}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA9AAA83-07D3-4480-9EF2-C9DA0C397485}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA9AAA83-07D3-4480-9EF2-C9DA0C397485}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D85BD2C-5312-4503-97C4-F0552A493BE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D85BD2C-5312-4503-97C4-F0552A493BE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D85BD2C-5312-4503-97C4-F0552A493BE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D85BD2C-5312-4503-97C4-F0552A493BE4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

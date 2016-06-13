@@ -1,0 +1,5 @@
+C:\Users\Gary\Desktop\Rutherford\Rutherford.Data\bin\Debug\Rutherford.Data.dll
+C:\Users\Gary\Desktop\Rutherford\Rutherford.Data\bin\Debug\Rutherford.Data.pdb
+C:\Users\Gary\Desktop\Rutherford\Rutherford.Data\obj\Debug\Rutherford.Data.dll
+C:\Users\Gary\Desktop\Rutherford\Rutherford.Data\obj\Debug\Rutherford.Data.pdb
+C:\Users\Gary\Desktop\Rutherford\Rutherford.Data\obj\Debug\Rutherford.Data.csprojResolveAssemblyReference.cache
