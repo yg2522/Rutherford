@@ -9,6 +9,11 @@ namespace Rutherford.Client.Managers
 {
     public class FileManager : IFileManager
     {
+        /// <summary>
+        /// writes a file to a directory given a byte array
+        /// </summary>
+        /// <param name="filename"></param>
+        /// <param name="input"></param>
         public void WriteFile(string filename, byte[] input)
         {
             string directories = Path.GetDirectoryName(filename);

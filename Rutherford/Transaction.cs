@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Rutherford
 {
+    /// <summary>
+    /// POCO to represent a transaction
+    /// </summary>
     public class Transaction
     {
         public int CustomerId { get; set; }

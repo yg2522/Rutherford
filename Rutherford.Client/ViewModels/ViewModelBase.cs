@@ -8,6 +8,9 @@ using System.Windows.Input;
 
 namespace Rutherford.Client.ViewModels
 {
+    /// <summary>
+    /// base view model used for WPF Binding
+    /// </summary>
     public class ViewModelBase : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;

@@ -7,6 +7,9 @@ using System.Windows.Input;
 
 namespace Rutherford.Client.WpfClasses
 {
+    /// <summary>
+    /// basic implementation of ICommand for use in WPF MVVM binding
+    /// </summary>
     public class RelayCommand : ICommand
     {
         private Action<object> _execute;

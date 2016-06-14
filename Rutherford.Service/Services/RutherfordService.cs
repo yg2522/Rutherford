@@ -8,6 +8,9 @@ using Utility;
 
 namespace Rutherford.Service.Services
 {
+    /// <summary>
+    /// Business logic for events and ticket purchases
+    /// </summary>
     public class RutherfordService : IRutherfordService
     {
         private IRepository _repo;
@@ -215,6 +218,11 @@ namespace Rutherford.Service.Services
             return trans.Select(t => ObjectFactory.GetTransaction(t)).ToArray();
         }
 
+        /// <summary>
+        /// Gets all the transactions that have happened through the system and encodes them into a report as a byte array
+        /// </summary>
+        /// <param name="encode"></param>
+        /// <returns></returns>
         public byte[] GetPurchaseHistoryReport(Encoding encode)
         {
             byte[] report = null;

@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Rutherford.Repository
 {
+    /// <summary>
+    /// Used to manage a connection to a rutherford database through entity given a connection string to the database.
+    /// </summary>
     public class Repository : IRepository
     {
         private RutherfordEntities _entity;

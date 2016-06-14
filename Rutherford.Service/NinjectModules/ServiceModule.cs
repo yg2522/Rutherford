@@ -8,6 +8,9 @@ using Ninject;
 
 namespace Rutherford.Service.NinjectModules
 {
+    /// <summary>
+    /// module used to bind service layer interfaces to ninject
+    /// </summary>
     public class ServiceModule : Ninject.Modules.NinjectModule
     {
         private string _connectionString;

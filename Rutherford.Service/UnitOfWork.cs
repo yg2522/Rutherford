@@ -7,6 +7,9 @@ using Utility;
 
 namespace Rutherford.Service
 {
+    /// <summary>
+    /// manages work calls to the service layer(s)
+    /// </summary>
     public class UnitOfWork : IUnitOfWork
     {
         public IRutherfordService RutherfordService

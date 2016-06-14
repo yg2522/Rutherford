@@ -7,6 +7,9 @@ using Ninject;
 
 namespace Utility
 {
+    /// <summary>
+    /// Helper class to allow us to statically access the ninject kernel
+    /// </summary>
     public class NinjectHelper
     {
         private static IKernel _kernal;

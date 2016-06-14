@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace Rutherford.Service
 {
+    /// <summary>
+    /// Used to convert data layer objects from the repository layer to POCOs so that they are easier to consume
+    /// </summary>
     internal static class ObjectFactory
     {
         #region Customer

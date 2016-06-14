@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Rutherford
 {
+    /// <summary>
+    /// POCO to represent an event
+    /// </summary>
     public class Event
     {
         public int EventId { get; set; }
