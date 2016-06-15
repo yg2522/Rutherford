@@ -17,11 +17,10 @@ namespace Rutherford.Client
     {
         protected override void OnStartup(StartupEventArgs e)
         {
-            IKernel kernel = new StandardKernel();
+            NinjectHelper.CreateKernel();
             var connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["RutherfordEntities"].ConnectionString;
-            kernel.Load(new Rutherford.Service.NinjectModules.ServiceModule(connectionString));
-            kernel.Load(new Rutherford.Client.NinjectModules.WpfModule());
-            NinjectHelper.LoadKernal(kernel);
+            NinjectHelper.Kernel.Load(new Rutherford.Service.NinjectModules.ServiceModule(connectionString));
+            NinjectHelper.Kernel.Load(new Rutherford.Client.NinjectModules.WpfModule());
             base.OnStartup(e);
         }
     }

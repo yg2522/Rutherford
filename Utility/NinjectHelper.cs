@@ -10,23 +10,20 @@ namespace Utility
     /// <summary>
     /// Helper class to allow us to statically access the ninject kernel
     /// </summary>
-    public class NinjectHelper
+    public static class NinjectHelper
     {
-        private static IKernel _kernal;
+        private static IKernel _kernel;
 
-        public static void LoadKernal(IKernel kernel)
+        public static IKernel Kernel { get { return _kernel; } }
+
+        public static void CreateKernel()
         {
-            _kernal = kernel;
+            _kernel = new StandardKernel();
         }
 
-        /// <summary>
-        /// Calls the Kernel's get method for bound item
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <returns></returns>
         public static T Get<T>()
         {
-            return _kernal.Get<T>();
+            return _kernel.Get<T>();
         }
     }
 }
