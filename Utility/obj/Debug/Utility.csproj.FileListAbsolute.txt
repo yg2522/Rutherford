@@ -4,3 +4,4 @@ C:\Users\Gary\Desktop\Rutherford\Utility\obj\Debug\Utility.dll
 C:\Users\Gary\Desktop\Rutherford\Utility\obj\Debug\Utility.pdb
 C:\Users\Gary\Desktop\Rutherford\Utility\bin\Debug\Ninject.dll
 C:\Users\Gary\Desktop\Rutherford\Utility\bin\Debug\Ninject.xml
+C:\Users\Gary\Desktop\Rutherford\Utility\obj\Debug\Utility.csprojResolveAssemblyReference.cache

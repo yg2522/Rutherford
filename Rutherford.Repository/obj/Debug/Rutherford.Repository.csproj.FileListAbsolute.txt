@@ -9,3 +9,4 @@ C:\Users\Gary\Desktop\Rutherford\Rutherford.Repository\bin\Debug\EntityFramework
 C:\Users\Gary\Desktop\Rutherford\Rutherford.Repository\bin\Debug\Ninject.xml
 C:\Users\Gary\Desktop\Rutherford\Rutherford.Repository\obj\Debug\Rutherford.Repository.dll
 C:\Users\Gary\Desktop\Rutherford\Rutherford.Repository\obj\Debug\Rutherford.Repository.pdb
+C:\Users\Gary\Desktop\Rutherford\Rutherford.Repository\obj\Debug\Rutherford.Repository.csprojResolveAssemblyReference.cache

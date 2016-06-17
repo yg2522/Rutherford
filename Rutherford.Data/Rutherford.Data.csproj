@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="Scripts\Setup1.0.sql" />
     <Content Include="StoredProcedures\GetTotalPurchasedEventTickets.sql" />
     <Content Include="StoredProcedures\AddTransaction.sql" />
     <Content Include="StoredProcedures\AddEvent.sql" />

@@ -33,3 +33,7 @@ C:\Users\Gary\Desktop\Rutherford\Rutherford.Client\obj\Debug\Views\AddEditEventV
 C:\Users\Gary\Desktop\Rutherford\Rutherford.Client\obj\Debug\Views\AddEditEventView.baml
 C:\Users\Gary\Desktop\Rutherford\Rutherford.Client\obj\Debug\Views\TicketPurchaseView.g.cs
 C:\Users\Gary\Desktop\Rutherford\Rutherford.Client\obj\Debug\Views\TicketPurchaseView.baml
+C:\Users\Gary\Desktop\Rutherford\Rutherford.Client\bin\Debug\Rutherford.Client.exe.manifest
+C:\Users\Gary\Desktop\Rutherford\Rutherford.Client\bin\Debug\Rutherford.Client.application
+C:\Users\Gary\Desktop\Rutherford\Rutherford.Client\obj\Debug\Rutherford.Client.exe.manifest
+C:\Users\Gary\Desktop\Rutherford\Rutherford.Client\obj\Debug\Rutherford.Client.application
